@@ -110,7 +110,6 @@ while True:
         secondNum = int(secondNum)
     elif(secondNum.count('.') == 1): 
         secondNum = stringToFloat(secondNum) # method at top
-        print(secondNum)
     else:
         print("\nEnter a valid equation\n")
         continue 
@@ -120,28 +119,35 @@ while True:
         case '+': 
             print("Solution: ", end="") 
             print(round(firstNum + secondNum, 7))
+            print()
         case '-': 
             print("Solution: ", end="") 
             print(round(firstNum - secondNum, 7))
+            print()
         case '*': 
             print("Solution: ", end="")  
             print(round(firstNum * secondNum, 7))
+            print()
         case '/': 
             print("Solution: ", end = "")
             if (secondNum == 0):
                 print("cannot divide by 0")
                 continue
             else: 
-                print(round(firstNum/secondNum, 7))          
+                print(round(firstNum/secondNum, 7))  
+                print()        
         case '%': 
             print("Solution: ", end = "")
             print(firstNum % secondNum)
+            print()
         case '^': 
             print("Solution: ", end = "")
             print(round(firstNum ** secondNum, 7))
+            print()
         case 'log':
             print("Solution: ", end = "")
             print(round(math.log(firstNum, secondNum), 7))
+            print()
         case 'exit':
             break
         case default:

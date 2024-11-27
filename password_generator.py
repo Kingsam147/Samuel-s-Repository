@@ -15,6 +15,7 @@ class Password:
     def __str__(self): 
         return f"{self.p}"  
 
+
 # method to create random password of a designated that contains at least one upper and lower letter, a number, and a special character
 def createPassword(length: int): 
     listOfCharacters = [string.ascii_uppercase, string.ascii_lowercase, string.digits, '!@#$%*']
