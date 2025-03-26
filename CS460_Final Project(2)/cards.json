@@ -1,0 +1,38 @@
+[
+  {
+    "image": "resized-images/chopper.jpg",
+    "name": "cardOne"
+  },
+  {
+    "image": "resized-images/download.jpg",
+    "name": "cardTwo"
+  },
+  {
+    "image": "resized-images/Duke_Dennis.jpg",
+    "name": "cardThree"
+  },
+  {
+    "image": "resized-images/IMG_0399.jpg",
+    "name": "cardFour"
+  },
+  {
+    "image": "resized-images/IMG_9346.jpg",
+    "name": "cardFive"
+  },
+  {
+    "image": "resized-images/Lebron_Sunshine.jpg",
+    "name": "cardSix"
+  },
+  {
+    "image": "resized-images/Luffy.jpg",
+    "name": "cardSeven"
+  },
+  {
+    "image": "resized-images/shooters_gonna_shoot.jpg",
+    "name": "cardEight"
+  },
+  {
+    "image": "resized-images/Sigma_Man.jpg",
+    "name": "cardNine"
+  }
+]

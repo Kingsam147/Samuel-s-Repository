@@ -1,0 +1,221 @@
+body {
+    min-height: 100vh; 
+    min-width: 100vw; 
+    background-color: black;
+    color: white;
+    place-items: center;
+}  
+
+h1 {
+    text-align: center;
+} 
+
+p {
+    text-align: center;
+}  
+
+.header{
+    height: 30%; 
+    width: 30%;  
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-bottom: 2%; 
+    
+    /* border: 2px solid white;   */
+    text-wrap: nowrap;
+    /* margin-left: 28%; */
+} 
+
+.clock {
+    height: 10%; 
+    width: 10vw;
+
+    text-align: center;  
+    font-size: 1.5rem; 
+    font-weight: bold;  
+    /* margin-bottom: 5%;  */
+    border: 2px solid white ; 
+}   
+
+.clock > #minutes {
+    margin-left: 2%;
+}
+
+.name_and_startButton {
+    display: flex; 
+    height: auto; 
+    width: 25vw; 
+    justify-content: space-between;  
+    margin-right: 5%;  
+    flex-shrink: 0; 
+    /* border: 2px pink solid;  */
+}
+ 
+
+#username {
+    width: 250px; 
+    box-sizing: content-box; 
+    text-align: center; 
+    border: none; 
+    outline: none;  
+    background-color: black; 
+    color: white; 
+    font-size: 20px;
+    border-bottom: 2px solid white;
+    margin-top: 8%; 
+    /* margin-left: 4%; */
+
+} 
+
+#username::placeholder {
+    color: white; 
+} 
+
+#username:focus {
+    border-bottom: 3px solid white; 
+} 
+
+#username:focus::placeholder {
+    color: black; 
+} 
+
+
+#startButton {
+    height: 50px; 
+    width: 100px; 
+    font-size: 15px;
+    background-color: white;
+    color: #663399;
+    border-radius: 10px; 
+    margin-left: 10%; 
+} 
+
+#startButton:hover {
+    background-image: linear-gradient(to right, #663399, #8853bd);
+    color: white; 
+}
+
+#highscoreLabel {
+    font-weight: bold;
+}
+
+.actions {
+    display: flex; 
+    justify-content: center;
+} 
+
+.actions button {
+    padding: 8px 16px;  
+    font-size: 30px; 
+    border-radius: 10px; 
+    background-color: white; 
+    color: #663399;
+} 
+
+.actions button:hover {
+    background-image: linear-gradient(to right, #663399, #8853bd);
+    color: white; 
+} 
+
+.modal{
+    visibility: hidden;
+    position: absolute; 
+    top: 50vh; 
+    left: 35vw; 
+    width: 200px; 
+    height: 200px;  
+
+    z-index: 2; 
+} 
+
+.modal.open {
+    opacity: 1; 
+    z-index: 999;  
+    display: flex; 
+}  
+
+.modal-inner {
+    background-color: #fff; 
+    border-radius: 5px; 
+    box-shadow: 0 1px 4px (0, 0, 0, 0.3); 
+    padding: 15px 25px; 
+    text-align: center; 
+    width: 380px; 
+    border: black solid 2px; 
+} 
+
+.modal-inner h2 {
+    margin: 0;  
+    color: black;
+} 
+
+.modal-inner p {
+    line-height: 24px; 
+    margin: 10px 0;  
+    color: black;
+} 
+
+.modal button {
+    background-image: linear-gradient(to right, #663399, #8853bd);
+    border-radius: 20px; 
+    border: 0; 
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); 
+    color: #fff; 
+    cursor: pointer; 
+    padding: 10px 25px;
+} 
+
+.grid-container {
+    display: grid; 
+    justify-content: center; 
+    grid-gap: 16px; 
+    grid-template-columns: repeat(6, 140px); 
+    grid-template-rows: repeat(2, calc(140px / 2 * 3)); 
+    z-index: 1; 
+} 
+
+.card {
+    height: calc(140px / 2 * 3);
+    width: 140px; 
+    border-radius: 10px; 
+    background-color: white; 
+    position: relative; 
+    transform-style: preserve-3d; 
+    transition: all 0.5s ease-in-out;
+} 
+
+.front-image {
+    width: 60px;
+    height: 60px;
+} 
+
+.card.flipped {
+    transform: rotateY(180deg); 
+} 
+
+.front, 
+.back {
+    backface-visibility: hidden;
+    position: absolute; 
+    border-radius: 10px; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    width: 100%; 
+} 
+
+.card .front {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transform: rotateY(180deg);
+} 
+
+.card .back {
+    /* imported from website(https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/) */
+    background-color: #ffff99;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1000 1000'%3E%3Cg fill='%23ffd573'%3E%3Cpolygon points='1000 -50 0 -50 500 450'/%3E%3Cpolygon points='550 500 1050 1000 1050 0'/%3E%3Cpolygon points='-50 0 -50 1000 450 500'/%3E%3Cpolygon points='0 1050 1000 1050 500 550'/%3E%3C/g%3E%3Cg fill='%23ffaa4d'%3E%3Cpolygon points='1000 -133.3 0 -133.3 500 366.7'/%3E%3Cpolygon points='633.3 500 1133.3 1000 1133.3 0'/%3E%3Cpolygon points='-133.3 0 -133.3 1000 366.7 500'/%3E%3Cpolygon points='0 1133.3 1000 1133.3 500 633.3'/%3E%3C/g%3E%3Cg fill='%23ff8026'%3E%3Cpolygon points='1000 -216.7 0 -216.7 500 283.3'/%3E%3Cpolygon points='716.7 500 1216.7 1000 1216.7 0'/%3E%3Cpolygon points='-216.7 0 -216.7 1000 283.3 500'/%3E%3Cpolygon points='0 1216.7 1000 1216.7 500 716.7'/%3E%3C/g%3E%3Cg fill='%23F50'%3E%3Cpolygon points='1000 -300 0 -300 500 200'/%3E%3Cpolygon points='800 500 1300 1000 1300 0'/%3E%3Cpolygon points='-300 0 -300 1000 200 500'/%3E%3Cpolygon points='0 1300 1000 1300 500 800'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='%23FE0' points='0 707.1 0 292.9 292.9 0 707.1 0 1000 292.9 1000 707.1 707.1 1000 292.9 1000'/%3E%3Cg fill='%23ffc800'%3E%3Cpolygon points='464.6 -242.5 -242.5 464.6 464.6 464.6'/%3E%3Cpolygon points='535.4 464.6 1242.5 464.6 535.4 -242.5'/%3E%3Cpolygon points='-242.5 535.4 464.6 1242.5 464.6 535.4'/%3E%3Cpolygon points='535.4 1242.5 1242.5 535.4 535.4 535.4'/%3E%3C/g%3E%3Cg fill='%23ffa200'%3E%3Cpolygon points='405.7 -301.4 -301.4 405.7 405.7 405.7'/%3E%3Cpolygon points='594.3 405.7 1301.4 405.7 594.3 -301.4'/%3E%3Cpolygon points='-301.4 594.3 405.7 1301.4 405.7 594.3'/%3E%3Cpolygon points='594.3 1301.4 1301.4 594.3 594.3 594.3'/%3E%3C/g%3E%3Cg fill='%23ff7b00'%3E%3Cpolygon points='346.8 -360.3 -360.3 346.8 346.8 346.8'/%3E%3Cpolygon points='653.2 346.8 1360.3 346.8 653.2 -360.3'/%3E%3Cpolygon points='-360.3 653.2 346.8 1360.3 346.8 653.2'/%3E%3Cpolygon points='653.2 1360.3 1360.3 653.2 653.2 653.2'/%3E%3C/g%3E%3Cg fill='%23F50'%3E%3Cpolygon points='287.9 -419.2 -419.2 287.9 287.9 287.9'/%3E%3Cpolygon points='712.1 287.9 1419.2 287.9 712.1 -419.2'/%3E%3Cpolygon points='-419.2 712.1 287.9 1419.2 287.9 712.1'/%3E%3Cpolygon points='712.1 1419.2 1419.2 712.1 712.1 712.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}

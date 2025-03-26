@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <h1>Memory Card Game</h1>
+    <div class="header">
+        <span class="clock">
+            <span id="minutes">0</span>
+            :
+            <span id="seconds">00</span>
+        </span> 
+        <br>
+        <div class="name_and_startButton">
+            <span class="name">
+                <input type="text" id="username" placeholder="username" oninput="resizeInput(this)" onfocus="resizeInput(this)" onblur="resetInput(this)">
+            </span> 
+    
+            <input type="button" id="startButton" value="Start" onclick="startGame()">
+        </div>
+        
+    </div>
+
+    
+
+    <div class="modal" id="modal"> 
+        <div class="modal-inner">
+            <h2>You Win!</h2>
+            <div class="highscores">
+                <p>Score: <span class="score">0</span></p>
+                <br><p id="highscoreLabel">Highscores: </p>
+                <p><span id="scoreOne">-</span></p>
+                <p><span id="scoreTwo">-</span></p>
+                <p><span id="scoreThree">-</span></p>
+                <p><span id="scoreFour">-</span></p>
+                <p><span id="scoreFive">-</span></p>
+            </div>
+            <button onclick="closeWindow()" id="closeModal">Close</button>
+            <button onclick="startGame()" id="restartButton">Restart</button>
+        </div>
+    </div>
+    <div class="grid-container"></div>
+    <p>Failed Attempts: <span class="attempts">0</span></p>
+    
+    <div class="actions">
+        <button onclick="restart()" id="resetButton">Reset</button>
+    </div>  
+
+    <script src="index.js"></script> 
+    <script src></script>
+</body>
+</html>
